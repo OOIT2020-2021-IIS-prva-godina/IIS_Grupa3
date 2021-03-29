@@ -30,15 +30,19 @@ public class Point {
 	}
 
 	public boolean equals(Object obj) {
-		if(obj instanceof Point) {
-			
-			Point pomocna=(Point)obj;
-			if(this.x==pomocna.x && this.y==pomocna.y) { 
+		if (obj instanceof Point) {
+
+			Point pomocna = (Point) obj;
+			if (this.x == pomocna.x && this.y == pomocna.y) {
 				return true;
 			}
 			return false;
-		}else
+		} else
 			return false;
+	}
+
+	public boolean contains(int x, int y) {
+		return this.distance(x, y) <= 2;
 	}
 
 	public void setX(int x) {

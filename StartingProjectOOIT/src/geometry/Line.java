@@ -17,25 +17,28 @@ public class Line {
 
 	public Line(Point startPoint, Point endPoint, boolean selected) {
 		this(startPoint, endPoint);
-		this.selected=selected;
-		
+		this.selected = selected;
+
 	}
-	
 
 	public double length() {
 		return this.startPoint.distance(this.endPoint.getX(), this.endPoint.getY());
 	}
-	
+
 	public boolean equals(Object obj) {
-		if(obj instanceof Line) {
-			
-			Line pomocna=(Line)obj;
-			if(this.startPoint.equals(pomocna.startPoint) && this.endPoint.equals(pomocna.endPoint)) { 
+		if (obj instanceof Line) {
+
+			Line pomocna = (Line) obj;
+			if (this.startPoint.equals(pomocna.startPoint) && this.endPoint.equals(pomocna.endPoint)) {
 				return true;
 			}
 			return false;
-		}else
+		} else
 			return false;
+	}
+
+	public boolean contains(int x, int y) {
+		return (this.startPoint.distance(x, y) + this.endPoint.distance(x, y)) - length() <= 2;
 	}
 
 	public void setStartPoint(Point startPoint) {
@@ -61,9 +64,9 @@ public class Line {
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}
-	
+
 	public String toString() {
-		return startPoint+"-->"+endPoint;
+		return startPoint + "-->" + endPoint;
 	}
 
 }
