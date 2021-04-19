@@ -119,8 +119,44 @@ public class Test {
 		System.out.println(p6 == p2);
 		System.out.println(p6.equals(p2)); //pre i posle redefinisanja metode
 
-
-
+		
+		//Vezbe 7
+		System.out.println("\nVezbe 7 - testiranje metoda");
+		System.out.println("\nTacka");
+		System.out.println(p1);
+		p1.moveBy(3, 5);
+		System.out.println(p1);
+		p1.moveTo(3, 5);
+		System.out.println(p1);
+		
+		System.out.println("\nLinija");
+		System.out.println(l1);
+		l1.moveBy(3, 5);
+		System.out.println(l1);
+		l1.moveTo(3, 5);//nece nista uraditi
+		System.out.println(l1);
+		
+		System.out.println("\nPravougaonik");
+		System.out.println(r1);
+		r1.moveBy(3, 5);
+		System.out.println(r1);
+		r1.moveTo(3, 5);
+		System.out.println(r1);
+		
+		System.out.println("\nKrug");
+		System.out.println(c1);
+		c1.moveBy(3, 5);
+		System.out.println(c1);
+		c1.moveTo(3, 5);
+		System.out.println(c1);
+		
+		System.out.println("\nKrug sa rupom");
+		Donut d1=new Donut(new Point(800, 100), 20, 10);
+		System.out.println(d1);
+		d1.moveBy(3, 5);
+		System.out.println(d1);
+		d1.moveTo(3, 5);
+		System.out.println(d1);
 	}
 
 }
