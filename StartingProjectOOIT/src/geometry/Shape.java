@@ -4,8 +4,9 @@ import java.awt.Graphics;
 
 public abstract class Shape implements Moveable, Comparable{
 
-	private boolean selected;//da ne bismo menjali konstruktore mozemo staviti protected umesto private
-
+	//private boolean selected;//da ne bismo menjali konstruktore mozemo staviti protected umesto private
+	protected boolean selected;
+	
 	public Shape() {
 	}
 	
